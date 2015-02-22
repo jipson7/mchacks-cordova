@@ -3,17 +3,16 @@ function downloadImage(url, success, err){
 	
 	var fileName = new Date().getTime() + ".png";
 	// writeLog(window.appRootDir.toURL() + "/" + fileName);
-	
-	ft = new FileTransfer();
-	ft.download(
+     	ft = new FileTransfer();
+              ft.download(
 	    url,
 	    window.appRootDir.toURL() + "/" + fileName,
 	    function(entry) {
 			var img_url = entry.toURL();
-			// var im = document.getElementById("myImage");
+                 // var im = document.getElementById("myImage");
 			// im.src = img_url;
-			writeLog(img_url);			
-			justForTesting();
+   writeLog(img_url);			
+					justForTesting();
 		    
 			alert("img url = " + img_url);
 			// var logFile = (window.appRootDir.toURL() + "/log.txt");
